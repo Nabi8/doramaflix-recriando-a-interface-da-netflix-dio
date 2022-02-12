@@ -1,0 +1,196 @@
+button {
+    cursor: pointer;
+}
+
+.banner {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0.7)), url("../img/apostandoalto2.jpg");
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 48px;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.banner .banner-close {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    top: 16px;
+    right: 16px;
+    background-color: #181818;
+    border: unset;
+    color: white;
+    font-family: cursive;
+    font-size: 16px;
+}
+
+.banner .banner-title {
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+
+.banner .banner-buttons .banner-buttons-watch {
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 8px 24px 8px 20px;
+    border: unset;
+}
+
+.banner .banner-buttons .banner-buttons-watch i {
+    margin-right: 10px;
+}
+
+.banner .banner-buttons .banner-buttons-icon {
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+    background-color: rgba(42,42,42,.6);
+    border: 2px solid rgba(255,255,255,.5);
+    color: white;
+}
+
+.info {
+    color: black;
+    padding: 16px 48px;
+    display: flex;
+}
+
+.info .info-description {
+    flex: 2;
+}
+
+.info .info-description div {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.info .info-description .info-description-age {
+    background-color: #f7c727;
+    font-weight: bold;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 8px;
+}
+
+.info .info-description .info-description-resume {
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.info .info-about {
+    flex: 1;
+}
+
+.info .info-about p {
+    margin-bottom: 14px;
+}
+
+.info .info-about p a {
+    color: #520a05;
+}
+
+.info .info-about p a:hover {
+    color: #EBA19B;
+}
+
+.episodes {
+    padding: 16px 48px;
+    color: black;
+}
+
+.episodes .episodes-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.episodes .episodes-header h4 {
+    font-size: 24px;
+}
+
+.episodes .episodes-header p {
+    font-size: 18px;
+}
+
+.episodes .episodes-body {
+    display: flex;
+    padding: 32px;
+    position: relative;
+    align-items: center;
+}
+
+.episodes .episodes-body:nth-child(2) {
+    background-color: #e4a6a1;
+}
+
+.episodes .episodes-body span {
+    font-size: 24px;
+    min-width: 27px;
+}
+
+.episodes .episodes-body img {
+    width: 130px;
+    min-width: 130px;
+    height: 74px;
+    object-fit: cover;
+    margin: 0px 8px 0px 16px;
+}
+
+.episodes .episodes-body .episodes-body-info {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+}
+
+.episodes .episodes-body .episodes-body-info h5 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.episodes .episodes-body .episodes-body-info .episodes-body-info-time {
+    position: absolute;
+    top: 36px;
+    right: 60px;
+}
+
+.dialog {
+    position: fixed;
+    top: 40px;
+    background-color: #FFF1EF;
+    width: 850px;
+    left: calc(50% - 425px);
+    z-index: 999;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+.dialog.hidden, .backdrop.hidden {
+    display: none;
+}
+
+.backdrop {
+    position: fixed;
+    background: black;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 998;
+    opacity: 0.4;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
