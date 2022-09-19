@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/main.css">
-
+    <link rel="stylesheet" href="style/info.css">
     <!--responsividade-->
-    <link rel="stylesheet" href="style/responsive.css"
+    <link rel="stylesheet" href="style/responsive.css">
 
     <!--owl css-->
     <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
@@ -15,97 +16,394 @@
 
     <!--fonte cabeçalho-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
 
 
     <!--fonte logo-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap"
+        rel="stylesheet">
 
 
     <!--fonte titulo da serie, filme ou documentario-->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
-    
+
+    <!--fonte titulo da imagem-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Open+Sans:wght@300&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
+
     <title>Doramaflix</title>
 </head>
-<body>
-   <header>
-       <div class="container">
-            <h2 class="logo">Doramaflix</h2>
-            <nav>
-                <a href="a">Início</a>
-                <a href="a">Minha Lista</a>
-                <a href="a">Filmes</a>
-                <a href="a">Séries</a>
-                <a href="a">Programas de TV</a>
-            </nav>
-       </div>
-   </header>
 
-   <main>
-       <div class="serie-principal">
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="botao-inicial">
+                <h2 class="logo">Doramaflix</h2>
+            </a>
+            <nav>
+                <div class="nav-left">
+                    <a href="index.html" class="botao-inicial">Início</a>
+                    <a href="a">Minha Lista</a>
+                    <a href="a">Filmes</a>
+                    <a href="a">Séries</a>
+                    <a href="a">Programas de TV</a>
+                </div>
+                <div class="nav-right">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-bell"></i>
+                    <i onClick="toggleMenu()" class="fas fa-user-circle"></i>
+                </div>
+
+
+                <div class="menu hidden">
+                    <i class="fas fa-caret-up"></i>
+                    <ul>
+                        <li>Conta</li>
+                        <li>Configuração</li>
+                        <li>Sair</li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="serie-principal">
             <div class="container">
                 <h3 class="titulo">Start Up</h3>
-                <p class="sinopse">Empenhados em transformar sonhos virtuais em realidade, jovens empreendedores competem por sucesso e amor no implacável mundo da alta tecnologia coreana.</p>
+                <p class="sinopse">Empenhados em transformar sonhos virtuais em realidade, jovens empreendedores
+                    competem por sucesso e amor no implacável mundo da alta tecnologia coreana.</p>
                 <div class="botoes">
                     <button role="button" class="botao">
-                            <i class="fas fa-play"></i>
-                            Assistir
-                        </button>
-                        <button role="button" class="botao">
-                            <i class="fas fa-info-circle"></i>
-                            Mais informações
+                        <i class="fas fa-play"></i>
+                        Assistir
+                    </button>
+                    <button class="botao" onclick="openDialog()">
+                        <i class="fas fa-info-circle"></i>
+                        Mais informações
                     </button>
                 </div>
             </div>
         </div>
 
-   </main>
+    </main>
 
-   <div class="titulo-carrosel">
-       <h2>Minha Lista</h2>
-   </div>
+    <div class="titulo-carrosel">
+        <h2>Minha Lista</h2>
+    </div>
 
 
-   <div class="carrosel-series">
+    <div class="carrosel-series">
         <div class="owl-carousel owl-theme">
-           <div class="item">
-            <img src="img/hospitalplaylist.jpg" alt="Hospital Playlist" srcset="">
-           </div>
-           <div class="item">
-            <img src="img/caçadores.jpg" alt="Caçadores de Demônios" srcset="">
-           </div>
-           <div class="item">
-            <img src="img/obomdetetive.jpg" alt="O Bom Detetive" srcset="">
-           </div>
-           <div class="item">
-            <img src="img/omitodesisifo.jpg" alt="O Mito de Sísifo" srcset="">
-           </div>
-           <div class="item">
-            <img src="img/vincenzo.jpeg" alt="Vincenzo" srcset="">
-           </div>
-           <div class="item">
-            <img src="img/rugal.jpg" alt="Rugal" srcset="">
-           </div>
-           <div class="item">
-            <img src="img/live.jpg" alt="Honra Teu Nome" srcset="">
-           </div>
-           <div class="item">
-            <img src="img/olasoueu.jfif" alt="Olá? Sou eu!" srcset="">
-           </div>
-            
-        
+            <div class="item">
+                <img src="img/hospitalplaylist.jpg" alt="Hospital Playlist" srcset="">
+                <p>Hospital Playlist</p>
+            </div>
+            <div class="item">
+                <img src="img/caçadores.jpg" alt="Caçadores de Demônios" srcset="">
+                <p>Caçadores de Demônios</p>
+            </div>
+            <div class="item">
+                <img src="img/obomdetetive.jpg" alt="O Bom Detetive" srcset="">
+                <p>O Bom Detetive</p>
+            </div>
+            <div class="item">
+                <img src="img/omitodesisifo.jpg" alt="O Mito de Sísifo" srcset="">
+                <p>O Míto de Sísifo</p>
+            </div>
+            <div class="item">
+                <img src="img/vincenzo.jpeg" alt="Vincenzo" srcset="">
+                <p>Vincenzo</p>
+            </div>
+            <div class="item">
+                <img src="img/rugal.jpg" alt="Rugal" srcset="">
+                <p>Rugal</p>
+            </div>
+            <div class="item">
+                <img src="img/live.jpg" alt="Honra Teu Nome" srcset="">
+                <p>Honra Teu Nome</p>
+            </div>
+            <div class="item">
+                <img src="img/olasoueu.jfif" alt="Olá? Sou eu!" srcset="">
+                <p>Olá? Sou eu!</p>
+            </div>
+            <div class="item">
+                <img src="img/apostandoalto.jpg" alt="Start Up" srcset="">
+                <p>Start Up</p>
+            </div>
         </div>
-   </div>
+    </div>
 
 
+    <div class="titulo-segundo-carrosel">
+        <h2>Porque você gostou de Você É A Minha Primavera</h2>
+    </div>
 
 
+    <div class="carrosel-voce-gostou">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="img/hellomytwenties.jpg" alt="Hello My Twenties">
+                <p>Hello, my twenties!</p>
+            </div>
+            <div class="item">
+                <img src="img/movetoheaven.jpg" alt="A Caminho Do Céu">
+                <p>A Caminho do Céu</p>
+            </div>
+            <div class="item">
+                <img src="img/umasegundachance.jpg" alt="Uma Segunda Chance">
+                <p>Uma Segunda Chance</p>
+            </div>
+            <div class="item">
+                <img src="img/romanceisabonusbook.jpg" alt="Romance Is A Bonus Book">
+                <p>Romance Is A Bonus Book</p>
+            </div>
+            <div class="item">
+                <img src="img/parasemprecamelia.jpg" alt="Para Sempre Camélia">
+                <p>Para Sempre Camélia</p>
+            </div>
+            <div class="item">
+                <img src="img/pousandonoamor.jpg" alt="Pousando No Amor">
+                <p>Pousando No Amor</p>
+            </div>
+            <div class="item">
+                <img src="img/primeiravida.jpg" alt="Porque Esta É A Minha Primeira Vida">
+                <p>Porque Esta É A Minha Primeira Vida</p>
+            </div>
+            <div class="item">
+                <img src="img/hometown.jpg" alt="Hometown Cha-Cha-Cha">
+                <p>Hometown Cha-Cha-Cha</p>
+            </div>
+            <div class="item">
+                <img src="img/olasoueu.jfif" alt="Olá? Sou eu!" srcset="">
+                <p>Olá? Sou eu!</p>
+            </div>
+        </div>
+    </div>
 
-   <script src="https://kit.fontawesome.com/7cede72b27.js" crossorigin="anonymous"></script>
-   <script src="js/owl/jquery.min.js"></script>
-   <script src="js/owl/owl.carousel.min.js"></script>
-   <script src="js/owl/setup.js"></script>
+
+    <footer class="rodape">© Desenvolvido por Ruthe Xavier no Bootcamp do Inter 2022</footer>
+
+    <div class="dialog hidden">
+        <section class="banner">
+            <button class="banner-close" onclick="removeDialog()">X</button>
+            <h3 class="banner-title">Start Up</h3>
+            <div class="banner-buttons">
+                <button class="banner-buttons-watch">
+                    <i class="fas fa-play"></i>
+                    Assistir
+                </button>
+                <button class="banner-buttons-icon">
+                    <i class="fas fa-solid fa-plus"></i>
+                </button>
+                <button class="banner-buttons-icon">
+                    <i class="fas fa-regular fa-thumbs-up"></i>
+                </button>
+                <button class="banner-buttons-icon">
+                    <i class="fas fa-regular fa-thumbs-down"></i>
+                </button>
+            </div>
+        </section>
+        <section class="info">
+            <div class="info-description">
+                <div>
+                    <p>2020</p>
+                    <p class="info-description-age">12</p>
+                    <p>1 Temporada</p>
+                </div>
+                <p class="info-description-resume">Empenhados em transformar sonhos virtuais em realidade, jovens
+                    empreendedores competem por sucesso e amor no implacável mundo da alta tecnologia coreana.</p>
+            </div>
+            <div class="info-about">
+                <p>
+                    Elenco: <a href="#">Bae Suzy</a>, <a href="#">Nam Joo-Hyuk</a>, <a href="#">Kim Seon-Ho</a>, <a
+                        href="#">Kang Ha-na</a>
+                </p>
+                <p>
+                    Gêneros: <a href="#">Coreano</a>, <a href="#">Drama romântico</a>, <a href="#">Comédia Romantica</a>
+                </p>
+                <p>
+                    Cenas e Momentos: <a href="#">Aqui tudo é possível</a>
+                </p>
+            </div>
+        </section>
+        <section class="episodes">
+            <div class="episodes-header">
+                <h4>Episódios</h4>
+                <p>Temporada 1</p>
+            </div>
+            <div class="episodes-body">
+                <span>1</span>
+                <img src="/img/startupep1.jpg"
+                    alt="Thumb episódio 1" />
+                <div class="episodes-body-info">
+                    <h5>Start Up</h5>
+                    <p>Quando o mundo de Seo Dal-mi ruiu, as cartas de Nam Do-san a confortaram. Quinze anos depois, ela precisa dele ao seu lado para provar que Won In-jae mentiu.</p>
+                    <p class="episodes-body-info-time">84min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>2</span>
+                <img src="/img/startupep2.jpg"
+                    alt="Thumb episódio 2" />
+                <div class="episodes-body-info">
+                    <h5>Familia, amigos, idiotas</h5>
+                    <p>Para preservar o passado de Dal-mi e garantir seu futuro, Choi Won-deok pede que Han Ji-pyeong realize uma tarefa impossível.</p>
+                    <p class="episodes-body-info-time">83min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>3</span>
+                <img src="/img/startupep3.jpg"
+                    alt="Thumb episódio 3" />
+                <div class="episodes-body-info">
+                    <h5>Anjo</h5>
+                    <p>Ji-pyeong faz de tudo para transformar Do-san no homem dos sonhos de Dal-mi. Uma situação inesperada leva In-jae a tomar uma decisão corajosa.</p>
+                    <p class="episodes-body-info-time">83min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>4</span>
+                <img src="/img/startupep4.jpeg"
+                    alt="Thumb episódio 4" />
+                <div class="episodes-body-info">
+                    <h5>Start Up</h5>
+                    <p>pesar dos caminhos diferentes, Dal-mi e In-jae escolhem o mesmo ponto de partida para alcançar seus sonhos. Ji-pyeong protege Dal-mi e ajuda Do-san.</p>
+                    <p class="episodes-body-info-time">80min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>5</span>
+                <img src="/img/startupep5.jpg"
+                    alt="Thumb episódio 5" />
+                <div class="episodes-body-info">
+                    <h5>Hackathon</h5>
+                    <p>Dal-mi e In-jae apresentam as ideias da equipe no palco do hackathon. Uma história sobre o passado de Dal-mi estimula Ji-pyeong a lutar pelo sucesso dela.</p>
+                    <p class="episodes-body-info-time">82min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>6</span>
+                <img src="/img/startupep6.jpg"
+                    alt="Thumb episódio 6" />
+                <div class="episodes-body-info">
+                    <h5>Homem-chave</h5>
+                    <p>In-jae usa as lições do pai e do padrasto a seu favor. Uma confusão envolvendo as ações da empresa testa Dal-mi, que se aconselha com Ji-pyeong.</p>
+                    <p class="episodes-body-info-time">81min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>7</span>
+                <img src="/img/startupep7.png"
+                    alt="Thumb episódio 7" />
+                <div class="episodes-body-info">
+                    <h5>Burn rate</h5>
+                    <p>Lutando contra os próprios sentimentos, Ji-pyeong se distancia de Dal-mi. A condição de Won-deok serve de inspiração para um novo projeto da Samsan Tech.</p>
+                    <p class="episodes-body-info-time">77min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>8</span>
+                <img src="/img/startupep8.jpg"
+                    alt="Thumb episódio 8" />
+                <div class="episodes-body-info">
+                    <h5>Back up</h5>
+                    <p>Más notícias inspiram Dal-mi a transformar o app num sucesso. Won Du-jeong planeja dar uma lição em Do-san e Dal-mi, mas o tiro sai pela culatra.</p>
+                    <p class="episodes-body-info-time">81min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>9</span>
+                <img src="/img/startupep9.jpg"
+                    alt="Thumb episódio 9" />
+                <div class="episodes-body-info">
+                    <h5>Risco</h5>
+                    <p>Do-san e Ji-pyeong sentem o peso dos segredos que carregam. Dúvidas e descobertas inesperadas levam Dal-mi de volta ao lugar em que tudo começou.</p>
+                    <p class="episodes-body-info-time">81min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>10</span>
+                <img src="/img/startupep10.jpg"
+                    alt="Thumb episódio 10" />
+                <div class="episodes-body-info">
+                    <h5>Demo day</h5>
+                    <p>Ji-pyeong dá a Dal-mi as respostas que ela tanto esperava e acaba fazendo uma confissão. Do-san recebe uma grande oportunidade.</p>
+                    <p class="episodes-body-info-time">84min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>11</span>
+                <img src="/img/startupep11.jpg"
+                    alt="Thumb episódio 11" />
+                <div class="episodes-body-info">
+                    <h5>Saída</h5>
+                    <p>Kim Yong-san faz Ji-pyeong refletir sobre comentários do passado. As empresas de In-jae e Dal-mi competem com programas que usam a mesma tecnologia.</p>
+                    <p class="episodes-body-info-time">77min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>12</span>
+                <img src="/img/startupep12.jpg"
+                    alt="Thumb episódio 12" />
+                <div class="episodes-body-info">
+                    <h5>Acqui-hire </h5>
+                    <p>Alex Kwon mostra sua verdadeira face. Do-san conta a Ji-pyeong sobre o estado de saúde de Won-deok.</p>
+                    <p class="episodes-body-info-time">86min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>13</span>
+                <img src="/img/startupep13.jpg"
+                    alt="Thumb episódio 13" />
+                <div class="episodes-body-info">
+                    <h5>Zona de conforto</h5>
+                    <p>O veículo autônomo de Dal-mi e In-jae é atacado por hackers. Os fundadores da Samsan Tech retornam após três anos em San Francisco.</p>
+                    <p class="episodes-body-info-time">73min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>14</span>
+                <img src="/img/startupep14.jpg"
+                    alt="Thumb episódio 14" />
+                <div class="episodes-body-info">
+                    <h5>Discurso de elevador</h5>
+                    <p>Dal-mi recebe a missão de recrutar os melhores desenvolvedores para sua empresa e tenta vender sua ideia para a Samsan Tech. Do-san sai para arejar a cabeça.</p>
+                    <p class="episodes-body-info-time">81min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>15</span>
+                <img src="/img/startupep15.jpg"
+                    alt="Thumb episódio 15" />
+                <div class="episodes-body-info">
+                    <h5>MPV (Produto Mínimo Viável</h5>
+                    <p>Jung Sa-ha e Lee Chul-san começam a namorar em segredo. Uma conversa com Do-san ajuda Ji-pyeong a tomar uma decisão sobre Dal-mi.</p>
+                    <p class="episodes-body-info-time">78min</p>
+                </div>
+            </div>
+            <div class="episodes-body">
+                <span>16</span>
+                <img src="/img/startupep16.jpg"
+                    alt="Thumb episódio 16" />
+                <div class="episodes-body-info">
+                    <h5>Expansão</h5>
+                    <p>Do-san e Dal-mi vislumbram novas metas para o futuro. Ji-pyeong encontra uma forma de mostrar sua gratidão a Won-deok. In-jae se reconecta com suas raízes.</p>
+                    <p class="episodes-body-info-time">81min</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="backdrop hidden" onclick="removeDialog()"></div>
+
+    <script src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/7cede72b27.js" crossorigin="anonymous"></script>
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/owl/setup.js"></script>
 </body>
+
 </html>
