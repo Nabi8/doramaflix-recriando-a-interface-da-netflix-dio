@@ -1,4 +1,20 @@
-# doramaflix-recriando-a-interface-da-netflix-dio
+# Bootcamp Inter
 
-Recriando a interface da Netflix no Bootcamp do Inter.
-Minha ideia foi criar uma versão para as séries e filmes asiáticos que eu tanto gosto!
+![preview](./github/print%20doramaflix.png)
+
+
+
+Projeto construído no Bootcamp do banco Inter.
+
+[Clique aqui para acessar](https://nabi8.github.io/doramaflix-recriando-a-interface-da-netflix-dio/)
+
+## 🧙🏼 Tecnologias 
+
+- HTML 
+- CSS
+- Javascript
+- Git e Github
+
+## 📧 Contato
+
+nabi.x.art@gmail.com
